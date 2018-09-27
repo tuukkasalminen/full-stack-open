@@ -1,0 +1,20 @@
+käyttäjä->selain:
+note left of selain
+ollessaan valmiiksi sivulla,
+käyttäjä kirjoittaa form-elementtiin
+haluamansa muistiinpanon ja painaa talleta
+end note over
+selain->palvelin: POST /new_note
+note left of palvelin
+uudelleenohjataan pyyntö tekemään GET-pyyntö
+headerin osoittamaan paikkaan osoitteeseen 
+https://fullstack-exampleapp.herokuapp.com/notes
+end note over 
+palvelin->selain:status 302, uudelleenohjaus
+note left of selain
+selain lataa sivun uudelleen ja
+päivittää uuden muistiinpanon
+näkymään
+end note over 
+selain->palvelin: GET /main.css, GET /main.js, GET /data.json
+palvelin->selain: status 200; css, javascript ja json-tiedostot

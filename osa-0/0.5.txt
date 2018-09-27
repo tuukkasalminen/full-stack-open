@@ -1,0 +1,17 @@
+käyttäjä->selain:
+note left of selain
+käyttäjä kirjoittaa selaimen osoiteriville
+https://fullstack-exampleapp.herokuapp.com/spa
+end note over 
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/spa
+note left of palvelin
+muodostetaan html missä 
+muistiinpanot taulukossa objekteina
+end note over 
+palvelin->selain: status 200, sivun html
+note left of selain
+selain näyttää palvelimen palauttaman html:n,
+jossa jokaisesta muistiinpanosta content-osio
+end note
+selain->palvelin: GET /main.css, GET /main.js, GET /data.json
+palvelin->selain: status 200; css, javascript ja json-tiedostot

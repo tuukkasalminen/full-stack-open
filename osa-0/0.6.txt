@@ -1,0 +1,13 @@
+käyttäjä->selain:
+note left of selain
+ollessaan valmiiksi sivulla,
+käyttäjä kirjoittaa form-elementtiin
+haluamansa muistiinpanon ja painaa talleta
+end note over
+selain->palvelin: POST /new_note_spa
+palvelin->selain:status 201, muistiinpano luotu sivulle
+note left of selain
+selain päivittää muistiinpanon sivulle
+javascript-koodia hyväksikäyttäen
+näkymään
+end note over 
